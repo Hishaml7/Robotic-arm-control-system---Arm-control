@@ -9,7 +9,7 @@ if (isset($_GET['save'])) {
     if (mysqli_num_rows($result) > 0) {
         $query3 = "UPDATE main SET Engine1 =" . $_GET['e1'] . ", Engine2 =" . $_GET['e2'] . ", Engine3 =" . $_GET['e3'] . ", Engine4 =" . $_GET['e4'] . ", Engine5 =" . $_GET['e5'] . ", Engine6 =" . $_GET['e6'];
         if (mysqli_query($conn, $query3)) {
-            echo "<script> alert('Data saved successfully') </script>";
+            echo "<script> alert('Data saved successfully'); window.location.href = 'index.php'; </script>";
         } else {
             echo "<script> alert('Error:" . mysqli_error($conn) . " ') </script>";
         }
